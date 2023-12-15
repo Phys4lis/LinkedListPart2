@@ -71,30 +71,24 @@ int validInput() {
 
 void add(Node* &head, Node* cur, Node* prev) {
   if (head == NULL) {
-    Student* s = new Student();
-    head->setStudent(s);
-    cout << "Please enter a first name." << endl;
-    char input[20];
-    cin.get(input, 20);
-    cin.get();
-    strcpy(s->firstName, input);
-    // Prompt last name
-    cout << "Please enter a last name." << endl;
-    cin.get(input, 20);
-    cin.get();
-    strcpy(s->lastName, input);
-    // Prompt id
-    cout << "Please enter an ID" << endl;
-    int idInput;
-    cin >> idInput;
-    cin.get();
-    s->ID = idInput;
-    // Prompt gpa
-    cout << "Please enter a gpa." << endl;
-    float floatInput;
-    cin >> floatInput;
-    cin.get();
-    s->GPA = floatInput; 
+
+  }
+  else if (head != NULL && head->getNext() == NULL) {
+    if (
+    Node* tempNode = head;
+      head = inputNode;
+      head->setNext(tempNode);
+      cur = tempNode;
+    }
+    else {
+      head->setNext(inputNode);
+      cur = inputNode;
+    }
+  }
+  else {
+    if (inputNode->getStudent()->getID() > cur->getStudent->getID() && inputNode->getStudent()->getID() < head->getNext()->getStudent()->getID()) {
+      
+    }
   }
 }
   

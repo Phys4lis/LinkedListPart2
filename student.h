@@ -13,6 +13,11 @@ class Student{
   char* getLastName();
   int getID();
   float getGPA();
+  // Setters
+  void setID(int newID);
+  void setGPA(float newGPA);
+  // Print function
+  void printStudent();
   // Variables
   char firstName[20];
   char lastName[20];
